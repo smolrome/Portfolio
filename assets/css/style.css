@@ -173,7 +173,7 @@ body.dark .hamburger span {
 }
 
 /* =======================
-   Hero Section
+   Hero Section - Playful
    ======================= */
 .hero {
   height: 90vh;
@@ -182,29 +182,80 @@ body.dark .hamburger span {
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  position: relative;
 }
 
 .hero-content {
   max-width: 600px;
 }
 
+/* Heading bounce */
 .hero h2 {
   font-size: 2.4rem;
   margin-bottom: 0.5rem;
 }
 
+.playful-greeting {
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Tagline playful hover */
 .tagline {
   color: var(--muted);
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.typing {
+.playful-tagline .accent {
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.playful-tagline .accent:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* =======================
+   Typing Effect
+   ======================= */
+#typing-wrapper {
+  display: inline-block;
+  min-width: 280px; /* prevents shift during phrase change */
   margin-bottom: 1.5rem;
 }
 
+.typing {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: var(--accent);
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* =======================
+   Hero Buttons - Playful
+   ======================= */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -212,14 +263,13 @@ body.dark .hamburger span {
   margin-bottom: 1.5rem;
 }
 
-/* Buttons */
 .btn,
 .btn-outline {
   padding: 0.8rem 1.4rem;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn {
@@ -227,8 +277,10 @@ body.dark .hamburger span {
   color: #fff;
 }
 
-.btn:hover {
-  opacity: 0.8;
+.btn:hover,
+.btn-outline:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .btn-outline {
@@ -241,17 +293,37 @@ body.dark .hamburger span {
   color: #fff;
 }
 
-/* Social Links */
+/* =======================
+   Social Links - Interactive
+   ======================= */
 .socials a {
   margin: 0 0.6rem;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.3s;
+  position: relative;
 }
 
 .socials a:hover {
   color: var(--accent);
 }
+
+.socials a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+.socials a:hover::after {
+  width: 100%;
+}
+
+
 
 /* =======================
    Sections

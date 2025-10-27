@@ -177,24 +177,46 @@ function animateParticles() {
 }
 animateParticles();
 
-// 🌀 Preloader
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
+
   setTimeout(() => {
     preloader.classList.add("hidden");
 
-    // ⌨️ Typing Effect
-    const text = "Full Stack Developer 💻";
-    let i = 0;
-    function typing() {
-      if (i < text.length) {
-        document.getElementById("typing").textContent += text.charAt(i);
-        i++;
-        setTimeout(typing, 100);
+    const phrases = [
+      "Web Developer",
+      "Automation Tools Creator",
+      "Mobile App Enthusiast",
+      "UI/UX Designer"
+    ];
+    let current = 0;
+    const typingSpeed = 100;
+    const pauseBetween = 1500;
+    const typingElement = document.getElementById("typing");
+
+    function typePhrase(phrase, index = 0) {
+      if (index < phrase.length) {
+        typingElement.textContent += phrase.charAt(index);
+        setTimeout(() => typePhrase(phrase, index + 1), typingSpeed);
+      } else {
+        setTimeout(() => erasePhrase(phrase), pauseBetween);
       }
     }
-    typing();
+
+    function erasePhrase(phrase, index = phrase.length - 1) {
+      if (index >= 0) {
+        typingElement.textContent = phrase.substring(0, index);
+        setTimeout(() => erasePhrase(phrase, index - 1), typingSpeed / 2);
+      } else {
+        current = (current + 1) % phrases.length;
+        typePhrase(phrases[current]);
+      }
+    }
+
+    typePhrase(phrases[current]);
   }, 800);
 });
+
+
 
 
