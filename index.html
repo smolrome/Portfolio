@@ -4,19 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rome | Web Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Particle Background -->
+  <canvas id="particleBg"></canvas>
 
-    <!-- 🌀 Preloader -->
-<div id="preloader">
-  <div class="loader-text">Rome.dev</div>
-  <div class="loader"></div>
-</div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-text">Rome.dev</div>
+    <div class="loader"></div>
+  </div>
 
   <!-- Scroll Progress Bar -->
   <div id="scrollProgress"></div>
@@ -24,27 +35,17 @@
   <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Rome<span class="accent">.dev</span></h1>
-
-      <!-- Desktop Links -->
+      <h1 class="logo accent-glow">Rome<span class="accent">.dev</span></h1>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <!-- Mode Toggle -->
       <div class="nav-actions">
         <button id="modeToggle" class="mode-toggle">🌙</button>
-
-        <!-- Hamburger Button -->
-        <div id="hamburger" class="hamburger">
-          <span></span><span></span><span></span>
-        </div>
+        <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
       </div>
     </nav>
-
-    <!-- Mobile Menu -->
     <ul id="mobileMenu" class="mobile-menu">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -56,15 +57,13 @@
   <section class="hero fade-in">
     <div class="hero-content">
       <img src="https://via.placeholder.com/160" alt="Rome Photo" class="profile-pic">
-      <h2>Hey, I’m <span class="accent">Rome</span></h2>
+      <h2 class="glow">Hey, I’m <span class="accent-glow">Rome</span></h2>
       <p class="tagline">I build clean, modern, and responsive web experiences.</p>
       <div id="typing" class="typing"></div>
-
       <div class="hero-buttons">
         <a href="#projects" class="btn">View Projects</a>
-        <a href="resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
+        <a href="assets/docs/resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
       </div>
-
       <div class="socials">
         <a href="https://github.com/smolrome" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
@@ -77,8 +76,9 @@
   <section id="about" class="about fade-in">
     <h2>About Me</h2>
     <p>
-      I'm a front-end web developer from the Philippines passionate about crafting aesthetic, intuitive, and functional web interfaces.
-      I love transforming creative ideas into digital experiences.
+      I’m a fresh graduate passionate about building secure and efficient software. 
+      I develop automation tools, web apps, and desktop systems while exploring Python, 
+      cybersecurity, and networking to create practical, high-performing solutions.
     </p>
   </section>
 
@@ -96,53 +96,66 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="projects fade-in">
-    <h2>Projects</h2>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="web">Web</button>
-      <button class="filter-btn" data-category="app">App</button>
-      <button class="filter-btn" data-category="design">Design</button>
-    </div>
+<section id="projects" class="projects fade-in">
+  <h2>Projects</h2>
 
-    <div class="project-list">
-      <div class="project-card" data-category="web">
-        <img src="https://via.placeholder.com/600x400" alt="Portfolio Project">
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="web">Web</button>
+    <button class="filter-btn" data-category="app">App</button>
+    <button class="filter-btn" data-category="design">Design</button>
+  </div>
+
+  <!-- Project List -->
+  <div class="project-list">
+    <!-- Web Project -->
+    <div class="project-card" data-category="web">
+      <img src="https://via.placeholder.com/600x400" alt="Portfolio Website">
+      <div class="project-content">
         <h3>Portfolio Website</h3>
         <p>My personal portfolio with animations, dark mode, and minimal UI.</p>
         <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="app">
-        <img src="https://via.placeholder.com/600x400" alt="App Project">
-        <h3>Task Tracker App</h3>
-        <p>Android app built with Kotlin to manage daily tasks efficiently.</p>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="design">
-        <img src="https://via.placeholder.com/600x400" alt="Design Project">
-        <h3>Landing Page UI</h3>
-        <p>Modern landing page prototype designed in Figma.</p>
-        <div class="project-links">
-          <a href="#">Live</a>
-          <a href="#">GitHub</a>
+          <a href="#" target="_blank">Live</a>
+          <a href="#" target="_blank">GitHub</a>
         </div>
       </div>
     </div>
-  </section>
+
+    <!-- App Project -->
+    <div class="project-card" data-category="app">
+      <img src="https://via.placeholder.com/600x400" alt="Task Tracker App">
+      <div class="project-content">
+        <h3>Task Tracker App</h3>
+        <p>Android app built with Kotlin to manage daily tasks efficiently.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design Project -->
+    <div class="project-card" data-category="design">
+      <img src="https://via.placeholder.com/600x400" alt="Landing Page UI">
+      <div class="project-content">
+        <h3>Landing Page UI</h3>
+        <p>Modern landing page prototype designed in Figma.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact" class="contact fade-in">
     <h2>Get in Touch</h2>
     <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
-    <a href="mailto:yourname@gmail.com" class="email-link">yourname@gmail.com</a>
+    <a href="mailto:pedrosa.jerome4@gmail.com" class="email-link">pedrosa.jerome4@gmail.com</a>
   </section>
 
   <!-- Footer -->
@@ -154,18 +167,18 @@
   <button id="scrollTopBtn" class="scroll-top">↑</button>
 
   <!-- Theme Color Switcher -->
-<div class="color-switcher" id="colorSwitcher">
-  <button id="paletteToggle" class="palette-toggle">🎨</button>
-  <div class="palette">
-    <div class="color-option" data-color="#009688" style="background:#009688;"></div>
-    <div class="color-option" data-color="#3f51b5" style="background:#3f51b5;"></div>
-    <div class="color-option" data-color="#9c27b0" style="background:#9c27b0;"></div>
-    <div class="color-option" data-color="#ff5722" style="background:#ff5722;"></div>
-    <div class="color-option" data-color="#4caf50" style="background:#4caf50;"></div>
+  <div class="color-switcher" id="colorSwitcher">
+    <button id="paletteToggle" class="palette-toggle">🎨</button>
+    <div class="palette">
+      <div class="color-option" data-color="#009688" style="background:#009688;"></div>
+      <div class="color-option" data-color="#3f51b5" style="background:#3f51b5;"></div>
+      <div class="color-option" data-color="#9c27b0" style="background:#9c27b0;"></div>
+      <div class="color-option" data-color="#ff5722" style="background:#ff5722;"></div>
+      <div class="color-option" data-color="#4caf50" style="background:#4caf50;"></div>
+    </div>
   </div>
-</div>
 
-
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
