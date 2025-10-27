@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rome | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Rome.dev</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="modeToggle" class="mode-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <img src="https://via.placeholder.com/160" alt="Rome Photo" class="profile-pic">
+      <h2>Hi, I’m <span>Rome</span></h2>
+      <p>A front-end web developer who loves building clean, modern, and user-friendly websites.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+        <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm Rome, a passionate web developer from the Philippines with a strong focus on front-end design and interactive user experiences.
+      I enjoy turning complex problems into simple, beautiful, and intuitive designs.  
+      I’m currently exploring advanced JavaScript and Firebase for full-stack development.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects fade-in">
+    <h2>Featured Projects</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="web">Web</button>
+      <button class="filter-btn" data-category="app">App</button>
+      <button class="filter-btn" data-category="design">Design</button>
+    </div>
+
+    <div class="project-list">
+      <div class="project-card" data-category="web">
+        <img src="https://via.placeholder.com/300x200" alt="Portfolio Project">
+        <h3>Portfolio Website</h3>
+        <p>My personal website built with HTML, CSS, and JS featuring animations and dark mode.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">🔗 Live Demo</a>
+          <a href="#" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="app">
+        <img src="https://via.placeholder.com/300x200" alt="App Project">
+        <h3>Task Tracker App</h3>
+        <p>An Android app made with Kotlin that helps users manage tasks efficiently.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">🔗 Live Demo</a>
+          <a href="#" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="design">
+        <img src="https://via.placeholder.com/300x200" alt="Design Project">
+        <h3>Landing Page UI</h3>
+        <p>A clean landing page prototype built using Figma and Adobe XD.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">🔗 Live Demo</a>
+          <a href="#" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p>If you’d like to collaborate or just say hi, feel free to reach out!</p>
+    <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rome. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
