@@ -5,58 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rome | Web Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Navigation -->
+
+    <!-- 🌀 Preloader -->
+<div id="preloader">
+  <div class="loader-text">Rome.dev</div>
+  <div class="loader"></div>
+</div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
   <header>
     <nav class="navbar">
-      <h1 class="logo">Rome.dev</h1>
+      <h1 class="logo">Rome<span class="accent">.dev</span></h1>
+
+      <!-- Desktop Links -->
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="modeToggle" class="mode-toggle">🌙</button>
+
+      <!-- Mode Toggle -->
+      <div class="nav-actions">
+        <button id="modeToggle" class="mode-toggle">🌙</button>
+
+        <!-- Hamburger Button -->
+        <div id="hamburger" class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <ul id="mobileMenu" class="mobile-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero fade-in">
     <div class="hero-content">
       <img src="https://via.placeholder.com/160" alt="Rome Photo" class="profile-pic">
-      <h2>Hi, I’m <span>Rome</span></h2>
-      <p>A front-end web developer who loves building clean, modern, and user-friendly websites.</p>
+      <h2>Hey, I’m <span class="accent">Rome</span></h2>
+      <p class="tagline">I build clean, modern, and responsive web experiences.</p>
+      <div id="typing" class="typing"></div>
+
       <div class="hero-buttons">
         <a href="#projects" class="btn">View Projects</a>
         <a href="resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
       </div>
+
       <div class="socials">
-        <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
-        <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+        <a href="https://github.com/smolrome" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about fade-in">
     <h2>About Me</h2>
     <p>
-      I'm Rome, a passionate web developer from the Philippines with a strong focus on front-end design and interactive user experiences.
-      I enjoy turning complex problems into simple, beautiful, and intuitive designs.  
-      I’m currently exploring advanced JavaScript and Firebase for full-stack development.
+      I'm a front-end web developer from the Philippines passionate about crafting aesthetic, intuitive, and functional web interfaces.
+      I love transforming creative ideas into digital experiences.
     </p>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects fade-in">
-    <h2>Featured Projects</h2>
+  <!-- Skills -->
+  <section id="skills" class="skills fade-in">
+    <h2>Tech Stack</h2>
+    <div class="skill-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+    </div>
+  </section>
 
-    <!-- Filter Buttons -->
+  <!-- Projects -->
+  <section id="projects" class="projects fade-in">
+    <h2>Projects</h2>
     <div class="filter-buttons">
       <button class="filter-btn active" data-category="all">All</button>
       <button class="filter-btn" data-category="web">Web</button>
@@ -66,48 +107,64 @@
 
     <div class="project-list">
       <div class="project-card" data-category="web">
-        <img src="https://via.placeholder.com/300x200" alt="Portfolio Project">
+        <img src="https://via.placeholder.com/600x400" alt="Portfolio Project">
         <h3>Portfolio Website</h3>
-        <p>My personal website built with HTML, CSS, and JS featuring animations and dark mode.</p>
+        <p>My personal portfolio with animations, dark mode, and minimal UI.</p>
         <div class="project-links">
-          <a href="#" target="_blank">🔗 Live Demo</a>
-          <a href="#" target="_blank">💻 GitHub</a>
+          <a href="#">Live</a>
+          <a href="#">GitHub</a>
         </div>
       </div>
 
       <div class="project-card" data-category="app">
-        <img src="https://via.placeholder.com/300x200" alt="App Project">
+        <img src="https://via.placeholder.com/600x400" alt="App Project">
         <h3>Task Tracker App</h3>
-        <p>An Android app made with Kotlin that helps users manage tasks efficiently.</p>
+        <p>Android app built with Kotlin to manage daily tasks efficiently.</p>
         <div class="project-links">
-          <a href="#" target="_blank">🔗 Live Demo</a>
-          <a href="#" target="_blank">💻 GitHub</a>
+          <a href="#">Live</a>
+          <a href="#">GitHub</a>
         </div>
       </div>
 
       <div class="project-card" data-category="design">
-        <img src="https://via.placeholder.com/300x200" alt="Design Project">
+        <img src="https://via.placeholder.com/600x400" alt="Design Project">
         <h3>Landing Page UI</h3>
-        <p>A clean landing page prototype built using Figma and Adobe XD.</p>
+        <p>Modern landing page prototype designed in Figma.</p>
         <div class="project-links">
-          <a href="#" target="_blank">🔗 Live Demo</a>
-          <a href="#" target="_blank">💻 GitHub</a>
+          <a href="#">Live</a>
+          <a href="#">GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="contact fade-in">
-    <h2>Contact Me</h2>
-    <p>If you’d like to collaborate or just say hi, feel free to reach out!</p>
-    <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+    <h2>Get in Touch</h2>
+    <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
+    <a href="mailto:yourname@gmail.com" class="email-link">yourname@gmail.com</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Rome. All rights reserved.</p>
+    <p>© 2025 Rome — Designed & Built with ❤️</p>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top">↑</button>
+
+  <!-- Theme Color Switcher -->
+<div class="color-switcher" id="colorSwitcher">
+  <button id="paletteToggle" class="palette-toggle">🎨</button>
+  <div class="palette">
+    <div class="color-option" data-color="#009688" style="background:#009688;"></div>
+    <div class="color-option" data-color="#3f51b5" style="background:#3f51b5;"></div>
+    <div class="color-option" data-color="#9c27b0" style="background:#9c27b0;"></div>
+    <div class="color-option" data-color="#ff5722" style="background:#ff5722;"></div>
+    <div class="color-option" data-color="#4caf50" style="background:#4caf50;"></div>
+  </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
