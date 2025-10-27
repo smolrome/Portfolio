@@ -184,7 +184,7 @@ window.addEventListener("load", () => {
     preloader.classList.add("hidden");
 
     // ⌨️ Typing Effect
-    const text = "Front-End Developer 💻";
+    const text = "Full Stack Developer 💻";
     let i = 0;
     function typing() {
       if (i < text.length) {
