@@ -4,188 +4,290 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rome | Web Developer Portfolio</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Favicon & Icons -->
-  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Particle Background -->
-  <canvas id="particleBg"></canvas>
-
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="loader-text">Rome.dev</div>
-    <div class="loader"></div>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
   </div>
 
-  <!-- Scroll Progress Bar -->
   <div id="scrollProgress"></div>
 
   <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo accent-glow">Rome<span class="accent">.dev</span></h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button id="modeToggle" class="mode-toggle">🌙</button>
-        <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+  <nav class="navbar">
+    <h1 class="logo">Rome.dev</h1>
+    <div class="nav-center">
+      <a href="#hero" class="nav-btn active">Home</a>
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#skills" class="nav-btn">Skills</a>
+      <a href="#projects" class="nav-btn">Projects</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="cta-btn cta-outline">Learn more</a>
+      <a href="#contact" class="cta-btn">Join us</a>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-left">
+      <div class="feature-card">
+        <div class="card-number">01</div>
+        <h3 class="card-title">True Ownership</h3>
+        <p class="card-description">Full control of your web presence through modern development practices</p>
       </div>
-    </nav>
-    <ul id="mobileMenu" class="mobile-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero fade-in">
-  <div class="hero-content">
-    <!-- Animated Greeting -->
-    <h2 class="glow playful-greeting">
-      Hey, I’m <span class="accent-glow">Rome</span>
-    </h2>
-
-    <!-- Tagline with playful accents -->
-    <p class="tagline playful-tagline">
-      I build <span class="accent">clean</span>, <span class="accent">modern</span>, and <span class="accent">interactive</span> web experiences.
-    </p>
-
-    <!-- Typing effect for dynamic roles -->
-    <div id="typing-wrapper">
-      <span id="typing"></span><span class="cursor"></span>
+      <div class="feature-card">
+        <div class="card-number">03</div>
+        <h3 class="card-title">Multiple Solutions</h3>
+        <p class="card-description">Diverse technology stack and approaches for every project need</p>
+      </div>
     </div>
 
-
-    <!-- Hero buttons with hover effects -->
-    <div class="hero-buttons">
-      <a href="#projects" class="btn playful-btn">View Projects</a>
-      <a href="assets/docs/resume.pdf" class="btn-outline playful-btn" target="_blank">Download Resume</a>
-    </div>
-
-    <!-- Socials with subtle hover animation -->
-    <div class="socials">
-      <a href="https://github.com/smolrome" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- About -->
-  <section id="about" class="about fade-in">
-    <h2>About Me</h2>
-    <p>
-      I’m a fresh graduate passionate about building secure and efficient software. 
-      I develop automation tools, web apps, and desktop systems while exploring Python, 
-      cybersecurity, and networking to create practical, high-performing solutions.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills fade-in">
-    <h2>Tech Stack</h2>
-    <div class="skill-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="60" height="60">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="60" height="60">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="60" height="60" class="github-white">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
-      <img src="assets/icons/app.png" alt="Google Apps Script" width="60" height="60">
-    </div>
-  </section>
-
-
-  <!-- Frameworks & Libraries -->
-  <section id="frameworks" class="skills fade-in">
-    <h2>Frameworks & Libraries</h2>
-    <div class="skill-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" width="60" height="60">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="60" height="60">
-    </div>
-  </section>
-
-  <!-- Projects -->
-<section id="projects" class="projects fade-in">
-  <h2>Projects</h2>
-
-  <!-- Filter Buttons -->
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="web">Web</button>
-    <button class="filter-btn" data-category="app">App</button>
-    <button class="filter-btn" data-category="design">Design</button>
-  </div>
-
-  <!-- Project List -->
-  <div class="project-list">
-    <!-- Web Project -->
-    <div class="project-card" data-category="web">
-      <img src="assets/icons/favicon.ico" alt="Portfolio Website">
-      <div class="project-content">
-        <h3>Portfolio Website</h3>
-        <p>My personal portfolio with animations, dark mode, and minimal UI.</p>
-        <div class="project-links">
-          <a href="#" target="_blank">Live</a>
-          <a href="#" target="_blank">GitHub</a>
+    <div class="hero-center">
+      <div class="robot-container">
+        <div class="robot-glow"></div>
+        <div class="robot-stack">
+          <div class="robot-head">
+            <div class="robot-antenna">
+              <div class="antenna-tip"></div>
+            </div>
+            <div class="robot-eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+          <div class="robot-head">
+            <div class="robot-antenna">
+              <div class="antenna-tip"></div>
+            </div>
+            <div class="robot-eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
+          <div class="robot-head">
+            <div class="robot-antenna">
+              <div class="antenna-tip"></div>
+            </div>
+            <div class="robot-eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- App Project -->
-    <div class="project-card" data-category="app">
-      <img src="https://via.placeholder.com/600x400" alt="Task Tracker App">
-      <div class="project-content">
-        <h3>Task Tracker App</h3>
-        <p>Android app built with Kotlin to manage daily tasks efficiently.</p>
-        <div class="project-links">
-          <a href="#" target="_blank">Live</a>
-          <a href="#" target="_blank">GitHub</a>
+    <div class="hero-right">
+      <h1 class="main-title">
+        Why<br>
+        <span class="title-gradient">Choose</span><br>
+        <span class="title-gradient">Rome?</span>
+      </h1>
+
+      <div class="feature-card">
+        <div class="card-number">02</div>
+        <h3 class="card-title">Professional Infrastructure</h3>
+        <p class="card-description">Enterprise-grade performance with modern frameworks and tools</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-number">04</div>
+        <h3 class="card-title">Future-Proof Technology</h3>
+        <p class="card-description">Built on scalable, secure modern web architecture</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a fresh graduate passionate about building secure and efficient software. I develop automation tools, web apps, and desktop systems while exploring Python, cybersecurity, and networking.</p>
+        <p>My approach combines clean code practices with modern design principles to create solutions that are both functional and visually appealing. I'm constantly learning and adapting to new technologies.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Commitment</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Design Project -->
-    <div class="project-card" data-category="design">
-      <img src="https://via.placeholder.com/600x400" alt="Landing Page UI">
-      <div class="project-content">
-        <h3>Landing Page UI</h3>
-        <p>Modern landing page prototype designed in Figma.</p>
-        <div class="project-links">
-          <a href="#" target="_blank">Live</a>
-          <a href="#" target="_blank">GitHub</a>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3 class="category-title">Frontend Development</h3>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <p>HTML5</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <p>CSS3</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+            <p>Bootstrap</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind">
+            <p>Tailwind CSS</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="filter: invert(1);">
+            <p>Next.js</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="category-title">Backend & Tools</h3>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <p>Python</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            <p>PHP</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+            <p>Laravel</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="Firebase">
+            <p>Firebase</p>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);">
+            <p>GitHub</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-container">
+      <div class="project-grid">
+        <div class="project-card-new">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Portfolio">
+            <span class="project-badge">Featured</span>
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>My personal portfolio with animations, dark mode, and minimal UI.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="https://github.com/smolrome" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
 
-  <!-- Contact -->
-  <section id="contact" class="contact fade-in">
-    <h2>Get in Touch</h2>
-    <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
-    <a href="mailto:pedrosa.jerome4@gmail.com" class="email-link">pedrosa.jerome4@gmail.com</a>
+        <div class="project-card-new">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" alt="Task Tracker">
+          </div>
+          <div class="project-content">
+            <h3>Task Tracker App</h3>
+            <p>Android app built to manage daily tasks efficiently with a clean UI.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Android</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card-new">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop" alt="Landing Page">
+          </div>
+          <div class="project-content">
+            <h3>Landing Page UI</h3>
+            <p>Modern landing page prototype designed with responsive layouts.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">UI/UX</span>
+              <span class="tech-tag">Design</span>
+            </div>
+            <div class="project-links">
+              <a href="#">View Design</a>
+              <a href="#">Prototype</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-content">
+      <h2 class="section-title">Get in Touch</h2>
+      <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem;">Let's collaborate or just have a chat about technology</p>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>📧 Email</h3>
+          <a href="mailto:pedrosa.jerome4@gmail.com">pedrosa.jerome4@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <h3>🌐 Location</h3>
+          <p>Tacloban City, Philippines</p>
+        </div>
+        <div class="contact-item">
+          <h3>💼 Available</h3>
+          <p>Open for opportunities</p>
+        </div>
+      </div>
+
+      <a href="mailto:pedrosa.jerome4@gmail.com" class="cta-btn" style="display: inline-block; margin-top: 2rem;">Send Message</a>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -193,22 +295,8 @@
     <p>© 2025 Rome — Designed & Built with ❤️</p>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollTopBtn" class="scroll-top">↑</button>
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
 
-  <!-- Theme Color Switcher -->
-  <div class="color-switcher" id="colorSwitcher">
-    <button id="paletteToggle" class="palette-toggle">🎨</button>
-    <div class="palette">
-      <div class="color-option" data-color="#009688" style="background:#009688;"></div>
-      <div class="color-option" data-color="#3f51b5" style="background:#3f51b5;"></div>
-      <div class="color-option" data-color="#9c27b0" style="background:#9c27b0;"></div>
-      <div class="color-option" data-color="#ff5722" style="background:#ff5722;"></div>
-      <div class="color-option" data-color="#4caf50" style="background:#4caf50;"></div>
-    </div>
-  </div>
-
-  <!-- JS -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
